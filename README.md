@@ -16,6 +16,7 @@ All functionality — including data access, filtering, sorting, and change trac
     - EntityQueryComposer: Utility for generating LINQ expressions for filtering and sorting based on incoming API queries.
     - Both components are fully decoupled and suitable for extraction into standalone libraries or NuGet packages.
 - In-Memory Database: Uses Entity Framework Core In-Memory provider for easy setup, development, and testing without requiring an external database.
+    - Data context is pre-filled with information and changes.
 
 ## 🏗️ Project Structure
 
