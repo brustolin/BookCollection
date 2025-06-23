@@ -2,8 +2,6 @@
 
 An experimental ASP.NET Core MVC project designed to demonstrate automatic entity change tracking and dynamic filtering & sorting in a clean, modular way.
 
-⸻
-
 ## ✨ Key Features
 - Automatic Change Tracking
 Each time a tracked property of a entity is updated, a corresponding EntityChanged record of the appropriate type is automatically generated, providing a full history of modifications.
@@ -19,8 +17,6 @@ All functionality — including data access, filtering, sorting, and change trac
     Both components are fully decoupled and suitable for extraction into standalone libraries or NuGet packages.
 - In-Memory Database: Uses Entity Framework Core In-Memory provider for easy setup, development, and testing without requiring an external database.
 
-⸻
-
 ## 🏗️ Project Structure
 
 ```text
@@ -31,20 +27,15 @@ All functionality — including data access, filtering, sorting, and change trac
 /Views                 # Basic Razor Views for demo purposes
 /wwwroot               # Pure JS and CSS front-end assets
 ```
-⸻
 
 ## 🚀 Potential Future Improvements
 - Extract EntityChangeTracker and EntityQueryComposer to a reusable library/NuGet package.
 - Replace MVC views with a SPA front-end (React, Vue, etc.) consuming the same API.
 - Add unit and integration tests for change tracking and filtering logic.
 
-⸻
-
 ## ⚠️ Known Issues
 - The front-end lacks proper input validation.
 - API response error handling is minimal and should be improved to handle unexpected or invalid server responses gracefully.
-
-⸻
 
 ## 📝 Notes
 This project is experimental and intended as a proof of concept for:
