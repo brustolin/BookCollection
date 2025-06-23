@@ -21,7 +21,7 @@ All functionality — including data access, filtering, sorting, and change trac
 
 ```text
 /Controllers           # API and MVC controllers
-/Data                  # 
+/Data                  # Data Contexts
 /Models                # Domain models: Book, BookChange, etc.
 /Tools                 # EntityChangeTracker and EntityQueryComposer implementations, alongside other helpers
 /Views                 # Basic Razor Views for demo purposes
