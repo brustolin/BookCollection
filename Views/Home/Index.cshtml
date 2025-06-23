@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="bookPage">
+    <form class="filter" id="bookFilter">
+        <div>
+            <span>Filter by:</span>
+            <input type="text" id="search-input" name="title" placeholder="Title" />
+        </div>
+        <div><span>Sorted by:</span>
+            <select id="sort-select" name="sortBy">
+                <option value="">none</option>
+                <option value="title">Title</option>
+                <option value="releaseDate">Release</option>
+            </select>
+            <input id="sort-asc" type="checkbox" name="sortDirection" value="desc" />
+            <label for="sort-asc">Descending</label>
+        </div>
+        <div class="filter-buttons">
+            <button id="search-button">Search</button>
+        </div>
+    </form>
+    <div id="book-list"></div>
+
+    <div class="BookActions">
+        <a id="AddNewBookButton" class="AddNewBook">Add New Book</a>
+    </div>
+
+    <pagination-view id="book-pagination"></pagination-view>
+</div>
+
+@section Scripts {
+    <script>
+        setupBookListPage();
+    </script>
+}

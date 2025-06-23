@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Update History";
+}
+
+<div class="historyPage">
+    <form class="filter" id="bookChangesFilter">
+        <div>
+            <span>Filter by:</span>
+            <input type="text" id="search-bookName" name="BookName" placeholder="Book Name" />
+            <select id="search-Property" name="Property">
+                <option value="">All Properties</option>
+                <option value="1">Title</option>
+                <option value="2">Short Description</option>
+                <option value="3">Release Date</option>
+                <option value="4">Author</option>
+            </select>
+            <input type="text" id="search-OldValue" name="OldValue" placeholder="Old Value" />
+            <input type="text" id="search-NewValue" name="NewValue" placeholder="New Value" />
+        </div>
+        <div>
+            <span>Sorted by:</span>
+            <select id="sort-select" name="sortBy">
+                <option value="">none</option>
+                <option value="Book.Title">Book Name</option>
+                <option value="PropertyId">Changed Property</option>
+                <option value="Timestamp">Timestamp</option>
+            </select>
+            <input id="sort-asc" type="checkbox" name="sortDirection" value="desc" />
+            <label for="sort-asc">Descending</label>
+        </div>
+        <div class="filter-buttons">
+            <button id="search-button">Search</button>
+        </div>
+    </form>
+    <ul id="updatesList"></ul>
+
+    <pagination-view id="bookChangesPagination"></pagination-view>
+</div>
+
+@section Scripts {
+    <script>
+        setupBookChanegsPage();
+    </script>
+}
